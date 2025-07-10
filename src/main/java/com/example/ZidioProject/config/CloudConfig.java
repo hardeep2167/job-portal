@@ -1,25 +1,4 @@
-//package com.example.ZidioProject.config;
-//
-//import com.cloudinary.Cloudinary;
-//import com.cloudinary.utils.ObjectUtils;
-//import org.springframework.context.annotation.Bean;
-//import org.springframework.context.annotation.Configuration;
-//
-//import java.util.Map;
-//
-//@Configuration
-//public class CloudConfig {
-//    @Bean
-//    public Cloudinary cloudinary() {
-//        Map<String, String> config = ObjectUtils.asMap(
-//                "cloud_name", "dwrq6bobd",
-//                "api_key", "568111943884175",
-//                "api_secret", "CqoYPGAF_lCyguquDhqKlwsfMZw"
-//        );
-//        return new Cloudinary(config);
-//    }
-//}
-//-------------------------------------------------------
+
 package com.example.ZidioProject.config;
 
 import com.cloudinary.Cloudinary;
