@@ -27,7 +27,7 @@ public class FileUploadService {
     public Map<String, String> upload(MultipartFile file) throws IOException {
         Map<String, String> result = new HashMap<>();
 
-        // 1️⃣ Save to local directory
+       
         Path path = Paths.get(uploadDir);
         if (!Files.exists(path)) {
             Files.createDirectories(path);
@@ -40,7 +40,7 @@ public class FileUploadService {
         String localUrl = "/files/" + localFileName;
         result.put("localUrl", localUrl);
 
-        // 2️⃣ Upload to Cloudinary
+      
         Map<?, ?> uploadResult = cloudinary.uploader().upload(
                 file.getBytes(),
                 ObjectUtils.asMap(
