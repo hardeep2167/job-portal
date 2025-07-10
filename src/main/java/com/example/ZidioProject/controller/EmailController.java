@@ -17,7 +17,7 @@ public class EmailController {
 
     @PostMapping("/send")
     public ResponseEntity<String> send(@RequestBody EmailRequest request) {
-        return ResponseEntity.ok(emailService.sendEmail(request)); // Fixed: ReponseEntiy -> ResponseEntity
+        return ResponseEntity.ok(emailService.sendEmail(request)); 
 
     }
 }
