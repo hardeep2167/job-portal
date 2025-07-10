@@ -24,12 +24,6 @@ public class FileUploadController {
     private FileUploadService fileUploadService;
 
 
-//
-//    @PostMapping("/upload")
-//    public ResponseEntity<Map<String, String>> upload(@RequestParam("file") MultipartFile file) throws IOException {
-//        String url = fileUploadService.upload(file); // Fixed method & typo
-//        return ResponseEntity.ok(Map.of("resumeUrl", url));
-//    }
 
     @PostMapping("/upload")
     public ResponseEntity<Map<String, String>> upload(@RequestParam("file") MultipartFile file) throws IOException {
