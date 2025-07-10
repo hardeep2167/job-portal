@@ -14,9 +14,9 @@ public class StudentService {
     private StudentRepository studentRepository;
 
     public String createOrUpdate(StudentDto dto) {
-        Student student = studentRepository.findByEmail(dto.email).orElse(new Student());  // Fixed Sudent -> Student
+        Student student = studentRepository.findByEmail(dto.email).orElse(new Student()); 
         student.setName(dto.name);
-        student.setEmail(dto.email);  // Fixed stdent -> student
+        student.setEmail(dto.email);  
         student.setCourse(dto.course);
         student.setUniversity(dto.university);
         student.setResumeUrl(dto.resumeUrl);
@@ -24,14 +24,14 @@ public class StudentService {
         return "Student Profile got saved";
     }
 
-    public StudentDto getProfile(String email) {  // Fixed SudentDto -> StudentDto
-        Student s = studentRepository.findByEmail(email).orElseThrow();  // Fixed sudenRepository
+    public StudentDto getProfile(String email) {  
+        Student s = studentRepository.findByEmail(email).orElseThrow(); 
         StudentDto dto = new StudentDto();
         dto.name = s.getName();
         dto.email = s.getEmail();
         dto.course = s.getCourse();
         dto.university = s.getUniversity();
         dto.resumeUrl = s.getResumeUrl();
-        return dto;  // Fixed reurn -> return
+        return dto;  
     }
 }
